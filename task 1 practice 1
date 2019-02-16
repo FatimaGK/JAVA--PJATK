@@ -1,0 +1,37 @@
+package com.company;
+//The first thing to do is to reference the library we want to use:
+import javax.swing.JOptionPane;
+//import java.io.InputStream;
+import java.util.Scanner;
+
+public class Main {
+
+    /*Problem 1 from Task 1
+Write a program which asks the user, by means of an object of type Scanner, to enter
+his/her height (in meters, as double), then the weight (in kilograms, also as a double).
+Then the program displays in a message box (JOptionPane.showMessageDialog)
+his/her BMI coecient (body mass index ) dened as the weight in kilograms divided
+by the square of height in meters  this number should come out close to 20.
+*/
+
+    public static void main(String[] args) {
+         // write your code here
+         // create a JOption 
+        JOptionPane jp = new JOptionPane();
+         //show a joptionpane dialog using showMessageDialog
+        String message = "Please enter your weight in KG";
+        JOptionPane.showMessageDialog(null, message);
+        Scanner sc = new Scanner(System.in);
+        double kg =sc.nextDouble();
+         //just reads the next double
+        String message2 = "Please enter your height in METER";
+        JOptionPane.showMessageDialog(null, message2);
+        double meter = sc.nextDouble();
+         //just reads the next double
+         //The formula is BMI = kg/m2 where kg is a person's weight in kilograms and m2 is their height in metres squared.
+        double bmi = kg/(meter*meter);
+        System.out.println(bmi);
+        String message3 = "your BMI is " +bmi ;
+        JOptionPane.showMessageDialog(null,message3);
+    }
+}
