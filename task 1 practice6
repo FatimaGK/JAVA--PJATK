@@ -1,0 +1,76 @@
+package com.company;
+
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+
+public class Main {
+    /*Problem 6
+    Write a program which asks the user, using JOptionPane dialog boxes or an object
+    of type Scanner, for three coecients of a quadratic equation
+    ax2 + bx + c = 0
+    and then displays the values of the real roots of this equation if they exist (or complex
+    roots, if you know how to do it). The program should give an answer always, no
+    matter what the values of coecients are. Attention: to calculate square root of
+    a number, say z, use Math.sqrt(z).
+    */
+    public static void main(String[] args) {
+        // write your code here
+/*
+Formula:
+Equation: ax^2 + bx + c
+Discriminant = b^2 – 4*a*c
+Root1= (-b + sqrt(d))/2*a
+Root2= (-b – sqrt(d))/2*a
+
+
+1. b2 −4ac < 0 There are no real roots.
+
+2. b2 −4ac = 0 There is one real root.
+
+3. b2 −4ac > 0 There are two real roots.
+
+*/
+
+        System.out.println("ax^2 + bx + c");
+        JOptionPane jp = new JOptionPane();
+        String message = "please enter an integer for a";
+        JOptionPane.showMessageDialog(null, message);
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+
+        JOptionPane jp2 = new JOptionPane();
+        String message2 = "please enter an integer for b";
+        JOptionPane.showMessageDialog(null, message2);
+        Scanner sc2 = new Scanner(System.in);
+        int b = sc2.nextInt();
+
+        JOptionPane jp3 = new JOptionPane();
+        String message3 = "please enter an integer for c";
+        JOptionPane.showMessageDialog(null, message3);
+        Scanner sc3 = new Scanner(System.in);
+        int c = sc3.nextInt();
+
+        int d = (b ^ 2 )- 4 *( a * c);
+        double r = (-b + (Math.sqrt(d))/ 2 * a);
+        double r2 = (-b + (Math.sqrt(d)) / 2 * a);
+        System.out.println("Given quadratic equation:" + a + "x^2+" + b + "x+" + c);
+
+        if (d > 0) {
+            System.out.println("Roots are real and unequal");
+            r = (-b + Math.sqrt(d)) / 2 * a;
+            r2 = (-b - Math.sqrt(d)) / 2 * a;
+            System.out.println("First root is:" + r);
+            System.out.println("Second root is:" + r2);
+        }
+        else if (d == 0) {
+            System.out.println("Roots are real and equal");
+            r = (-b + Math.sqrt(d)) / (2 * a);
+            System.out.println("Root:" + r);
+        }
+        if (d < 0) {
+            System.out.println("Roots are imaginary");
+        }
+
+    }
+}
