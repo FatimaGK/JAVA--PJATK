@@ -1,0 +1,33 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+    /* Problem 2
+Write a program which reads three natural numbers, a, b and c, and then prints "OK"
+if any two of them are equal, but the third is dierent, and "NOT OK" otherwis*/
+
+    public static void main(String[] args) {
+        // write your code here
+        System.out.println("enter an integer value for a");
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        System.out.println("enter an integer value for b");
+        Scanner sc2 = new Scanner(System.in);
+        int b = sc2.nextInt();
+        System.out.println("enter an integer value for c");
+        Scanner sc3 = new Scanner(System.in);
+        int c = sc3.nextInt();
+
+        if (a == b && b != c) {
+        //if a is equal to b and b is not equal to c
+            System.out.println("ok");
+        } else if (a == c && a != b) {
+            System.out.println("ok");
+        } else if (b == c && b != a) {
+            System.out.println("ok");
+        } else
+        System.out.println("not ok ");
+
+
+    }
+}
