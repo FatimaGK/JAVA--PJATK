@@ -1,0 +1,63 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    /*
+Problem 5
+Write a program which reads three numbers, a, b and c, and then nds and prints
+the middle (by value) of them. Variables a, b and c should not be modied.
+
+
+*/
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter an integer for a ");
+        int a = sc.nextInt();
+        Scanner sc2 = new Scanner(System.in);
+        System.out.println("enter an integer for b ");
+        int b = sc.nextInt();
+        Scanner sc3 = new Scanner(System.in);
+        System.out.println("enter a number for c ");
+        int c = sc.nextInt();
+        int max = 0;
+        int mid = 0;
+        int min= 0;
+        if(a>b&&a>c){
+            max = a;
+            if (b<a&&b>c){
+                mid = b;
+                min = c;
+            }
+        }else if(a>b&&a>c){
+            max = a;
+            if (c<a&&c>b){
+                mid = c;
+                min = b;
+
+            }
+        }else if (b>a&&b>c){
+            max = b;
+            if (a<b&&a>c){
+                mid = a;
+                min =c;
+            }
+        } else if (b>a&&b>c){
+            max = b;
+            if (c<b&&c>a){
+                mid = c;
+                min = a;
+
+            }
+        } else if (c > a && c > b) {
+            max = c;
+            if (b < c && b > a) {
+                mid = b;
+                min = c;
+            }
+        }
+        System.out.println("middle number is = "+mid);
+
+    }
+}
