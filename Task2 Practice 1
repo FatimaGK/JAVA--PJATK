@@ -1,0 +1,39 @@
+package com.company;
+
+//import javax.swing.JOptionPane;
+
+import java.util.Scanner;
+
+
+public class Main {
+    /*
+
+Problem 1
+Write a program which can be used as a (very) simple calculator. The program
+reads, using a Scanner, two numbers (of type double) and, as a String, the symbol
+of an arithmetic operation ( + , − , ∗ or /). Then it displays the result (sum,
+difference, product or ratio of the two numbers). In order to compare strings, say s1
+and s2, use function equals (s1.equals(s2) returns true or false).
+
+    */
+    public static void main(String[] args) {
+        System.out.println("Please enter  first number ");
+        Scanner sc = new Scanner(System.in);
+        double num = sc.nextDouble();
+        System.out.println("Please enter second number");
+        double num2 = sc.nextDouble();
+        System.out.println("Please enter calculations you want(+,-,*,/)");
+        String operation = sc.next();
+
+        if (operation.equals("+")){
+            System.out.println( num + num2);
+        } else if (operation.equals("-")) {
+            System.out.println(num - num2);
+        } else if (operation.equals("*")) {
+            System.out.println(num * num2);
+        } else if (operation.equals("/")) {
+            System.out.println (num / num2);
+        }
+
+    }
+}
