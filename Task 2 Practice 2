@@ -1,0 +1,54 @@
+package com.company;
+
+//import javax.swing.JOptionPane;
+
+import java.util.Scanner;
+
+
+public class Main {
+    /*
+
+Problem 2
+Write a program which reads four integer numbers and prints the difference between
+the largest and the smallest of them. Don’t use arrays, strings or collections.
+
+    */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter an integer (Not.do not enter the same number twice) ");
+        int a = sc.nextInt();
+        System.out.println("Please enter an integer");
+        int b = sc.nextInt();
+        System.out.println("Please enter an integer");
+        int c = sc.nextInt();
+        System.out.println("Please enter an integer");
+        int d = sc.nextInt();
+        int min = 0;
+        int max = 0;
+        if (a > b && a > c && a > d) {
+            max = a;
+        } else if (b > a && b > c && b > d) {
+            max = b;
+        } else if (c > a && c > b && c > d) {
+            max = c;
+        } else if (d > a && d > b && d > c) {
+            max = d;
+        }
+
+        if (a < b && a < c && a < d) {
+            min = a;
+        } else if (b < a && b < c && b < d) {
+            min = b;
+        } else if (c < a && c < b && c < d) {
+            min = c;
+        } else if (d < a && d < b && d < c) {
+            min = d;
+        }
+
+        System.out.println("The difference between the largets and the smallest integer is "+(max - min));
+
+
+    }
+}
+
+
