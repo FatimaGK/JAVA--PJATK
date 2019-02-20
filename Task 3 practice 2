@@ -1,0 +1,44 @@
+package com.company;
+
+import java.util.Scanner;
+
+import java.util.Scanner;
+
+public class Main {
+    /* Problem 2
+Write a program which reads an odd natural number n and writes on the console
+a symmetric ‘kite’ consisting of asterisks: in the first line n stars, in the second line
+n − 2 stars, . . . , in n-th – one star. For example, for n = 7 the output should look
+like this:
+  *******
+   *****
+    ***
+     *
+*/
+
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.close();
+        //int y is for spaces
+        //int x is for stars
+
+          for (int  x = 1, y = n / 2; x <= n; x+=2, --y) {
+            for (int i = 0; i < y; ++i)
+                System.out.print(" ");
+            for (int i = 0; i < x; ++i)
+                System.out.print("*");
+            System.out.println();
+
+        }
+          for (int a=n,b=0;b<=n/2;a-=2,b++){
+              for (int j=0;j<b;j++)
+                  System.out.print(" ");
+              for (int j = 0; j < a; ++j)
+                  System.out.print("+");
+              System.out.println();
+
+          }
+    }
+}
