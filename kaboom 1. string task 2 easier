@@ -1,0 +1,23 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    /*Task 2 (Homework)
+Read email as a string from standard input (Scanner).
+Check if the value is valid or not and display a message i.e. "E-mail must contain '@' character.".*/
+
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+        String userInput = sc.next();
+        if (userInput.contains("@")){
+            System.out.println(userInput);
+        }else{
+
+            System.out.println("E-mail must contain '@' character.");
+        }
+
+    }
+
+}
