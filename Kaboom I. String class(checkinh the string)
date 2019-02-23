@@ -1,0 +1,62 @@
+package com.company;
+
+import java.util.Scanner;
+/* Task 1
+Read the snippet below. Create a program, that:
+
+*replaces all 'a' with 'z'
+*changes all upper cases to lower cases
+*removes all whitespaces from the begin and end of the string
+*checks if the string contains any 'c'
+public class StringFunctions {
+
+    public static void main(String[] args) {   
+        String sentence = "Dominus vitae necisque";
+
+        String[] words = sentence.split(" ");
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+            System.out.println(word.toUpperCase());
+        }
+
+    }
+
+}
+    */
+  
+
+import java.util.Scanner;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+        String sentence = "Dominus vitae necisque";
+
+        String[] words = sentence.split(" ");
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+            System.out.println(word.trim().toLowerCase().replace('a', 'z') + word.contains("c"));
+
+        }
+
+    }
+
+}
+    //if for new Strings from user
+
+/*public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.next();
+
+
+        System.out.println(input.trim().toLowerCase().replace('a', 'z')+input.contains("c"));
+
+
+    }
+    
+
+
+*/
