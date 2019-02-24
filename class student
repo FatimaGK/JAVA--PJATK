@@ -1,0 +1,42 @@
+package com.company;
+
+import javax.swing.plaf.synth.SynthTableUI;
+import java.util.Scanner;
+
+public class Main {
+    /*ask 3
+Task 4
+Create a class "Student". Create fields for "name",
+"studentIndex" and one extra. Create an object of the class and fill with values.
+Create method "sayHello", which prints basic student's information and use the method in main.
+Create a graph for object in notation from Task 3.  */
+    public static void main(String[] args) {
+        Student zara = new Student("ZARA",18765,45);
+        Student julia = new Student("JULIA",19837,35);
+        Student pablo = new Student( "PABLO",17869,46);
+        zara.sayHello();
+        julia.sayHello();
+        pablo.sayHello();
+
+
+
+    }
+}
+
+class Student {
+   //fields
+    String name;
+    int studentindex;
+    int scores;
+    //constructor
+ Student(String name,int studentindex,int scores){
+     this.name = name;
+     this.studentindex = studentindex;
+     this.scores = scores;
+ }
+ //void method doesnt return anything
+    void sayHello(){
+        System.out.println(name+"  "+studentindex+"  "+scores);
+    }
+
+}
